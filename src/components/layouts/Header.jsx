@@ -8,6 +8,7 @@ import { HiMiniBars2 } from "react-icons/hi2";
 import { FaSearch, FaUser, FaCaretDown, FaShoppingCart } from "react-icons/fa";
 
 import Heading from "../Heading";
+import { Link } from "react-router-dom";
 function Header() {
   return (
     <>
@@ -15,16 +16,22 @@ function Header() {
         <Container>
           <Flex className={"justify-between"}>
             <div className="w-[40%]">
-              <Image imgSrc={Logo} imgAlt={Logo} />
+              <Link to={"/"}>
+                <Image imgSrc={Logo} imgAlt={Logo} />
+              </Link>
             </div>
             <div className="w-[60%]">
               <Menu className={"text-sm text-menuColor"}>
-                <li className="hover:text-menuHcolor hover:font-bold duration-300">
-                  Home
-                </li>
-                <li className="hover:text-menuHcolor hover:font-bold duration-300">
-                  Shop
-                </li>
+                <Link to={"/"}>
+                  <li className="hover:text-menuHcolor hover:font-bold duration-300">
+                    Home
+                  </li>
+                </Link>
+                <Link to={"shop"}>
+                  <li className="hover:text-menuHcolor hover:font-bold duration-300">
+                    Shop
+                  </li>
+                </Link>
                 <li className="hover:text-menuHcolor hover:font-bold duration-300">
                   About
                 </li>
