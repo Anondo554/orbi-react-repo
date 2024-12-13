@@ -7,7 +7,11 @@ function Products() {
   return (
     <div className='py-6 mt-5'>
       <Container>
-        <Flex className={'justify-between'}>
+        <Flex className={'justify-between flex-wrap gap-y-3'}>
+          <Product/>
+          <Product/>
+          <Product/>
+          <Product/>
           <Product/>
           <Product/>
           <Product/>
